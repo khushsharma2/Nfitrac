@@ -1,0 +1,541 @@
+.app-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffffff;
+  color: #000000;
+  min-height: 100vh;
+  padding: 20px;
+  animation: fadeIn 1s ease;
+}
+
+.dark-mode {
+  background-color: #000000;
+  color: #ffffff; }
+
+.dashboard-header {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #a9a9a9;
+  animation: slideInLeft 0.8s ease; }
+
+.dark-mode .dashboard-header {
+  border-bottom: 2px solid #c0c0c0;
+}
+
+.header-top {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 5px;
+  color: #000000;
+  animation: none !important;
+}
+
+.dark-mode h1 {
+  color: #ffffff;
+}
+
+p {
+  font-size: 1.1rem;
+  color: #a9a9a9;
+  animation: fadeIn 1.2s ease;
+}
+
+.dark-mode p {
+  color: #c0c0c0;}
+
+.goal-summary {
+  background-color: #f0f0f0;
+  padding: 15px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  margin-top: 10px;
+  animation: scaleIn 0.8s ease;
+}
+
+.dark-mode .goal-summary {
+  background-color: #333333;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+.goal-text {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #000000;
+}
+
+.dark-mode .goal-text {
+  color: #ffffff;
+}
+
+.progress-bar-background {
+  width: 100%;
+  height: 18px;
+  background-color: #c0c0c0;
+  border-radius: 9px;
+  overflow: hidden;
+  animation: pulse 2s infinite;
+}
+
+.dark-mode .progress-bar-background {
+  background-color: #333333;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background-color: #000000;
+  transition: width 0.5s ease-in-out;
+  animation: slideInLeft 1s ease;
+}
+
+.dark-mode .progress-bar-fill {
+  background-color: #c0c0c0;
+}
+
+.logout-button {
+  background: linear-gradient(135deg, #000000 0%, #a9a9a9 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 16px;
+  padding: 14px 24px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1rem;
+  margin: 8px 12px 8px 0;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 20px rgba(169, 169, 169, 0.3);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 140px;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  animation: pulse 2s infinite;
+}
+
+.darkmode-button {
+  background: linear-gradient(135deg, #000000 0%, #a9a9a9 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 16px;
+  padding: 14px 24px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1rem;
+  margin: 8px 12px 8px 0;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 20px rgba(169, 169, 169, 0.3);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 140px;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  animation: pulse 2s infinite;
+}
+
+.logout-button::before,
+.darkmode-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.6s ease;
+}
+
+.logout-button:hover::before,
+.darkmode-button:hover::before {
+  left: 100%;
+}
+
+.logout-button:hover {
+  background: linear-gradient(135deg, #7b1fa2 0%, #4a148c 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(74, 20, 140, 0.4);
+}
+
+.darkmode-button:hover {
+  background: linear-gradient(135deg, #7b1fa2 0%, #4a148c 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(74, 20, 140, 0.4);
+}
+
+.logout-button:active {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(74, 20, 140, 0.3);
+}
+
+.darkmode-button:active {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(51, 51, 51, 0.3);
+}
+
+.logout-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(74, 20, 140, 0.3);
+}
+
+.darkmode-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(51, 51, 51, 0.3);
+}
+
+/* Dark mode styles for buttons */
+.dark-mode .logout-button {
+  background: linear-gradient(135deg, #6a1b9a 0%, #9c27b0 100%);
+  box-shadow: 0 4px 20px rgba(106, 27, 154, 0.4);
+}
+
+.dark-mode .darkmode-button {
+  background: linear-gradient(135deg, #0d0d0d 0%, #1a1a1a 100%);
+  color: #ffffff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+}
+
+.dark-mode .logout-button:hover {
+  background: linear-gradient(135deg, #9c27b0 0%, #6a1b9a 100%);
+  box-shadow: 0 8px 25px rgba(106, 27, 154, 0.5);
+}
+
+.dark-mode .darkmode-button:hover {
+  background: linear-gradient(135deg, #9c27b0 0%, #6a1b9a 100%);
+  color: #ffffff;
+  box-shadow: 0 8px 25px rgba(106, 27, 154, 0.5);
+}
+
+.dark-mode .logout-button:active {
+  box-shadow: 0 4px 15px rgba(106, 27, 154, 0.4);
+}
+
+.dark-mode .darkmode-button:active {
+  box-shadow: 0 4px 15px rgba(204, 204, 204, 0.4);
+}
+
+.dark-mode .logout-button:focus {
+  box-shadow: 0 0 0 3px rgba(106, 27, 154, 0.4);
+}
+
+.dark-mode .darkmode-button:focus {
+  box-shadow: 0 0 0 3px rgba(204, 204, 204, 0.4);
+}
+
+
+
+.card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.07);
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.dark-mode .card {
+  background-color: #000000;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+h3 {
+  color: #4a148c;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.dark-mode h3 {
+  color: #ffffff;
+}
+
+.add-meal-button,
+.remove-meal-button {
+  background-color: #000000;
+  color: #ffffff;
+  border: 1px solid #333333;
+  border-radius: 6px;
+  padding: 8px 14px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.add-meal-button:hover,
+.remove-meal-button:hover {
+  background-color: #333333;
+}
+
+.diet-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.diet-table th,
+.diet-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.diet-table th {
+  background-color: #ede7f6;
+  color: #4a148c;
+  font-weight: 700;
+}
+
+.dark-mode .diet-table th {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.calorie-summary {
+  margin-top: 15px;
+  font-weight: 600;
+  color: #4a148c;
+}
+
+.dark-mode .calorie-summary {
+  color: #ffffff;
+}
+
+.reset-activities-button {
+  background-color: #000000;
+  color: #ffffff;
+  border: 1px solid #333333;
+  border-radius: 6px;
+  padding: 8px 14px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  margin-left: 10px;
+}
+
+.reset-activities-button:hover {
+  background-color: #333333;
+}
+
+select[aria-label="Filter activities"] {
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  color: #333333;
+  background-color: #ffffff;
+  transition: background-color 0.3s ease;
+  margin-right: 10px;
+}
+
+select[aria-label="Filter activities"]:focus {
+  outline: none;
+  border-color: #000000;
+  background-color: #f0f0f0;
+}
+
+.dark-mode select[aria-label="Filter activities"] {
+  color: #ffffff;
+  background-color: #000000;
+  border-color: #333333;
+}
+
+.dark-mode select[aria-label="Filter activities"]:focus {
+  background-color: #333333;
+}
+
+
+.dark-mode input,
+.dark-mode textarea,
+.dark-mode select {
+  background-color: #000000;
+  color: #ffffff;
+  border-color: #333333;
+}
+
+.dark-mode input:focus,
+.dark-mode textarea:focus,
+.dark-mode select:focus {
+  border-color: #ffffff;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2);
+}
+
+.dark-mode button {
+  background-color: #000000;
+  color: #ffffff;
+  border-color: #333333;
+}
+
+.dark-mode button:hover {
+  background-color: #333333;
+}
+
+.dark-mode .card h3,
+.dark-mode .card h4 {
+  color: #ffffff;
+}
+
+.dark-mode .card p {
+  color: #ffffff;
+}
+
+.dark-mode .card label {
+  color: #ffffff;
+}
+
+/* Navigation */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+}
+
+.dark-mode .nav {
+  background: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(10px);
+}
+
+.nav h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  color: #1a202c;
+}
+
+.dark-mode .nav h1 {
+  color: #ffffff;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.nav span {
+  font-size: 14px;
+  color: #718096;
+}
+
+.dark-mode .nav span {
+  color: #ffffff;
+}
+
+.dark-mode .darkmode-button {
+  background: linear-gradient(135deg, #6a1b9a 0%, #9c27b0 100%);
+  color: #000000;
+  box-shadow: 0 4px 20px rgba(106, 27, 154, 0.4);
+}
+
+.dark-mode .darkmode-button:hover {
+  background: linear-gradient(135deg, #9c27b0 0%, #6a1b9a 100%);
+  color: #ffffff;
+  box-shadow: 0 8px 25px rgba(106, 27, 154, 0.5);
+}
+
+.dark-mode form input,
+.dark-mode form select,
+.dark-mode form textarea {
+  background-color: #000000;
+  color: #ffffff;
+  border: 1px solid #333333;
+}
+
+.dark-mode form input:focus,
+.dark-mode form select:focus,
+.dark-mode form textarea:focus {
+  border-color: #ffffff;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2);
+}
+
+.dark-mode form label {
+  color: #ffffff;
+}
+
+
+.dark-mode a {
+  color: #ffffff;
+}
+
+.dark-mode a:hover {
+  color: #cccccc;
+}
+
+.dark-mode table {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.dark-mode table th,
+.dark-mode table td {
+  border-color: #333333;
+}
+
+.dark-mode table th {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.dark-mode .progress-bar-background {
+  background-color: #333333; }
+
+.dark-mode .progress-bar-fill {
+  background-color: #ffffff;    }
+
+
+.dark-mode .goal-setting,
+.dark-mode .activity-form,
+.dark-mode .activity-list,
+.dark-mode .leaderboard,
+.dark-mode .calorie-calendar {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.dark-mode .goal-setting input,
+.dark-mode .activity-form input,
+.dark-mode .leaderboard input {
+  background-color: #000000;
+  color: #ffffff;
+  border-color: #333333;
+}
+
+.dark-mode .goal-setting button,
+.dark-mode .activity-form button,
+.dark-mode .leaderboard button {
+  background-color: #000000;
+  color: #ffffff;
+  border-color: #333333;
+}
+
+.dark-mode .goal-setting button:hover,
+.dark-mode .activity-form button:hover,
+.dark-mode .leaderboard button:hover {
+  background-color: #333333;
+}
+
+.dark-mode h2 {
+  color: #ffffff !important;
+}
+
+.dark-mode p {
+  color: #ffffff !important;
+}
+
+.dark-mode span {
+  color: #ffffff !important;
+}
+
+/*second most time consuming page i like dash board tried to take some inspiration but kept changing its look and now feels good to look at */

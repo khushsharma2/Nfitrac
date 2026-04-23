@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "email": "testuser@example.com",
+    "password": "testpass"
+  },
+  {
+    "id": 2,
+    "email": "khushsharma20045@gmail.com",
+    "password": "123"
+  },
+  {
+    "id": 3,
+    "email": "ex@gmail.com",
+    "password": "123"
+  },
+  {
+    "id": 4,
+    "email": "1@gmail.com",
+    "password": "123"
+  },
+  {
+    "id": 5,
+    "email": "2@gmail.com",
+    "password": "123"
+  },
+  {
+    "id": 6,
+    "email": "test@example.com",
+    "password": "password123"
+  },
+  {
+    "id": 7,
+    "email": "7@gmail.com",
+    "password": "123"
+  },
+  {
+    "id": 8,
+    "email": "8@gmail.com",
+    "password": "123"
+  },
+  {
+    "id": 9,
+    "email": "12@gmail.com",
+    "password": "123"
+  },
+  {
+    "id": 10,
+    "email": "19@gmail.com",
+    "password": "123"
+  },
+  {
+    "id": 11,
+    "email": "khush123@gmail.com",
+    "password": "123"
+  },
+  {
+    "id": 12,
+    "email": "d@gmail.com",
+    "password": "1234"
+  }
+]

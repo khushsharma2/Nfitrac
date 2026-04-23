@@ -1,0 +1,464 @@
+  
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: #ffffff;
+  color: #000000;
+  line-height: 1.6;
+  animation: fadeIn 1s ease;
+}
+
+.frontpage-wrapper {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.sticky-header {
+  position: sticky;
+  top: 0;
+  background-color: #000000;
+  color: #ffffff;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(169, 169, 169, 0.5);
+  animation: slideInDown 0.8s ease;
+}
+
+.sticky-header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+}
+
+.app-name {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  text-shadow:
+    0 0 5px #a9a9a9,
+    0 0 10px #c0c0c0,
+    0 0 20px #c0c0c0,
+    0 0 40px #a9a9a9;
+  animation: none !important;
+}
+
+.top-nav {
+  background: #000000;
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 40px;
+  transition: background 0.3s ease;
+  animation: slideInRight 0.8s ease;
+}
+
+.top-nav ul {
+  background: #000000;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-button {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 8px 12px;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  border-bottom: 3px solid transparent;
+}
+
+.nav-button:hover {
+  color: #c0c0c0;
+  border-bottom: 3px solid #c0c0c0;
+}
+
+.nav-button.active {
+  color: #c0c0c0;
+  border-bottom: 3px solid #c0c0c0;
+}
+.section-white {
+  background-color: #fff;
+  padding: 60px 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  margin-bottom: 60px;
+}
+
+.section-lightgray {
+  background-color: #f7f7f7;
+  padding: 60px 40px;
+  border-radius: 12px;
+  margin-bottom: 60px;
+}
+
+.philosophy-section {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.philosophy-images {
+  flex: 1 1 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.philosophy-images img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.philosophy-images img:hover {
+  transform: scale(1.05);
+}
+
+.philosophy-text {
+  flex: 1 1 500px;
+}
+
+.philosophy-text h2 {
+  font-size: 2.8rem;
+  color: #111;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+.philosophy-text p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  margin-bottom: 25px;
+  color: #444;
+}
+
+.philosophy-text .author {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-top: 40px;
+  color: #020003;
+}
+
+.btn-primary {
+  display: inline-block;
+  background-color: #070308;
+  color: white;
+  padding: 14px 40px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-top: 30px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 6px 15px rgb(1, 1, 1);
+}
+
+.btn-primary:hover {
+  background-color: #030204;
+  box-shadow: 0 8px 20px rgba(3, 3, 4, 0.7);
+}
+
+
+.reviews-section {
+  text-align: center;
+}
+
+.reviews-section h2 {
+  font-size: 2.5rem;
+  color: #111;
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+
+.reviews-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.review-card {
+  background-color: white;
+  border-radius: 20px;
+  padding: 30px 25px;
+  width: 280px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-10px);
+}
+
+.review-card img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 3px solid #030204;
+}
+
+.review-card p {
+  font-style: italic;
+  color: #555;
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+.review-card span {
+  font-weight: 700;
+  color: #0a040d;
+  font-size: 1.1rem;
+}
+
+.how-it-works-section,
+.apps-section {
+  text-align: center;
+}
+
+.how-it-works-section h2,
+.apps-section h2 {
+  font-size: 2.5rem;
+  color: #111;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.how-it-works-section p,
+.apps-section p {
+  font-size: 1.1rem;
+  color: #444;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+
+.qa-section {
+  max-width: 1200px;
+  margin: 0 auto 60px auto;
+  padding: 60px 40px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.qa-section h2 {
+  font-size: 2.5rem;
+  color: #020204;
+  margin-bottom: 40px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.qa-container details {
+  background-color: white;
+  border-radius: 15px;
+  padding: 20px 25px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  transition: box-shadow 0.3s ease;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+.qa-container details[open] {
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.qa-container summary {
+  font-weight: 700;
+  font-size: 1.2rem;
+  outline: none;
+  cursor: pointer;
+}
+
+.qa-container p {
+  margin-top: 15px;
+  color: #444;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Dark mode i have todo this too  */
+.dark-mode body {
+  background-color: #000;
+  color: #fff;
+}
+
+.dark-mode .frontpage-wrapper {
+  background-color: #000;
+}
+
+.dark-mode .sticky-header {
+  background-color: #000;
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .app-name {
+  color: #fff;
+  background: linear-gradient(45deg, #333, #000);
+}
+
+.dark-mode .top-nav {
+  background: #000;
+  padding: 10px 0;
+}
+
+.dark-mode .nav-button {
+  background-color: #000;
+  color: #fff;
+  border-radius: 6px;
+  padding: 8px 12px;
+  margin: 0 4px;
+}
+
+.dark-mode .nav-button:hover,
+.dark-mode .nav-button.active {
+  background-color: #555;
+  color: #fff;
+  border-bottom-color: #555;
+}
+
+.dark-mode .section-white {
+  background-color: #111;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .section-lightgray {
+  background-color: #000;
+}
+
+.dark-mode .philosophy-text h2 {
+  color: #fff;
+}
+
+.dark-mode .philosophy-text p {
+  color: #ccc;
+}
+
+.dark-mode .philosophy-text .author {
+  color: #fff;
+}
+
+.dark-mode .btn-primary {
+  background-color: #fff;
+  color: #000;
+  box-shadow: 0 6px 15px rgba(255, 255, 255, 0.5);
+}
+
+.dark-mode .btn-primary:hover {
+  background-color: #ccc;
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.7);
+}
+
+.dark-mode .reviews-section h2 {
+  color: #fff;
+}
+
+.dark-mode .review-card {
+  background-color: #111;
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .review-card p {
+  color: #ccc;
+}
+
+.dark-mode .review-card span {
+  color: #fff;
+}
+
+.dark-mode .how-it-works-section h2,
+.dark-mode .apps-section h2 {
+  color: #fff;
+}
+
+.dark-mode .how-it-works-section p,
+.dark-mode .apps-section p {
+  color: #ccc;
+}
+
+.dark-mode .qa-section {
+  background-color: #000;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .qa-section h2 {
+  color: #fff;
+}
+
+.dark-mode .qa-container details {
+  background-color: #000;
+  border-color: #333;
+  box-shadow: 0 6px 18px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .qa-container details[open] {
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.15);
+}
+
+.dark-mode .qa-container summary {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.dark-mode .qa-container p {
+  color: #ccc;
+}
+
+/* Dark mode button in nav */
+.darkmode-button {
+  background: rgba(123, 31, 162, 0.1);
+  border: 1px solid #0d0a0f;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fbfafc;
+  cursor: pointer;
+  padding: 8px 16px;
+  transition: all 0.3s ease;
+}
+
+.darkmode-button:hover {
+  background: rgba(123, 31, 162, 0.2);
+  color: #4a148c;
+  border-color: #4a148c;
+}
+
+.dark-mode .darkmode-button {
+  background: #fff;
+  border: 1px solid #fff;
+  border-radius: 6px;
+  color: #000;
+}
+
+.dark-mode .darkmode-button:hover {
+  background: #ccc;
+  color: #000;
+}
